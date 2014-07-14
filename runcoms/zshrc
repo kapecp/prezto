@@ -12,3 +12,6 @@ fi
 
 # Customize to your needs...
 
+# make ctrl+arrow work as on bash - jump words
+bindkey ";5C" forward-word
+bindkey ";5D" backward-word
