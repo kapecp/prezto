@@ -44,12 +44,12 @@ function prompt_paradox_precmd {
   start_time=$SECONDS
 
   # make the horizontal line
-  local the_date=${#${(%):-%D{%L:%M:%S}}}
-  local last_command_status
+  the_date=${#${(%):-%D{%L:%M:%S}}}
+  #last_command_status
   (( last_command_status = 1 ))
-  local i_filler
+#  local i_filler
   i_filler=$(( $COLUMNS - $last_command_status - $the_date - 7 )) # 7 is space required for exit value + some space
-  filler="%{%F{240}%}${(l:${i_filler}::-:)}" # 240 is gray
+  filler="%{%F{250}%}${(l:${i_filler}::-:)}" # 240 is gray
 }
 
 function prompt_paradox_setup {
